@@ -1,7 +1,9 @@
 def people_info(people):
     """Вывод данных о человеке"""
+    result_list = []
     for key, value in people.items():
-        print(f"{key}: {value}")
+        result_list.append(f"{key}: {value}")
+    return " ".join(result_list)
 
 
 def del_key_age(people):

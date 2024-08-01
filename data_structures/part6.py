@@ -26,9 +26,9 @@ def binary_search(array, value):
         mid = (low + high) // 2
 
     if low > high:
-        print('No value')
+        return 'No value'
     else:
-        print('ID =', mid)
+        return f'ID = {mid}'
 
 
 if __name__ == "__main__":
