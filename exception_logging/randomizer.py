@@ -1,6 +1,6 @@
 from random import randint
 
-import logger
+import logger_conf
 
 logger = logger.get_logger(__name__, 'randomizer.log')
 

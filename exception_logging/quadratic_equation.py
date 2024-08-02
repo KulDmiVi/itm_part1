@@ -1,8 +1,8 @@
 import math
 
-import logger
+from exception_logging import logger_conf
 
-loger = logger.get_logger(__name__, 'quadratic.log')
+loger = logger_conf.get_logger(__name__, 'quadratic.log')
 
 
 def input_data():
