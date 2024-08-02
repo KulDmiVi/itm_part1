@@ -35,6 +35,7 @@ def multiplication_table():
     return result
 
 
+
 def output_list():
     result = []
     data_list = [random.randint(0, 100) for _ in range(10)]
@@ -57,7 +58,6 @@ def output_multiples_three():
         if i % 3 == 0:
             result.append(i)
     return result
-
 
 def summ_100():
     return sum(range(1, 101))
