@@ -8,9 +8,9 @@ def get_positive_count():
         if int(input("Введите третье число: ")) > 0:
             numbers_count += 1
     except ValueError:
-        print("Ошибка ввода!")
+        return "Ошибка ввода!"
     else:
-        print(f"Количество положительных чисел: {numbers_count}")
+        return f"Количество положительных чисел: {numbers_count}"
 
 
 def get_max_number():
@@ -18,14 +18,14 @@ def get_max_number():
         first_number = float(input("Введите первое число: "))
         second_number = float(input("Введите второе число: "))
     except ValueError:
-        print("Ошибка ввода!")
+        return "Ошибка ввода!"
     else:
         if first_number == second_number:
             pass
         elif first_number > second_number:
-            print(f"Большее число: {first_number}")
+            return f"Большее число: {first_number}"
         else:
-            print(f"Большее число: {second_number}")
+            return f"Большее число: {second_number}"
 
 
 def get_min_max_number():
@@ -33,16 +33,14 @@ def get_min_max_number():
         first_number = float(input("Введите первое число: "))
         second_number = float(input("Введите второе число: "))
     except ValueError:
-        print("Ошибка ввода!")
+        return "Ошибка ввода!"
     else:
         if first_number == second_number:
             pass
         elif first_number > second_number:
-            print(f"Большее число: {first_number}")
-            print(f"Меньшее число: {second_number}")
+            return f"Большее число: {first_number} \n Меньшее число: {second_number}"
         else:
-            print(f"Большее число: {second_number}")
-            print(f"Меньшее число: {first_number}")
+            return f"Большее число: {second_number} \n Меньшее число: {first_number}"
 
 
 def get_min_number():
@@ -51,7 +49,7 @@ def get_min_number():
         second_number = float(input("Введите второе число: "))
         third_number = float(input("Введите второе число: "))
     except ValueError:
-        print("Ошибка ввода!")
+         return "Ошибка ввода!"
     else:
         if not first_number == second_number == third_number:
             if first_number > second_number:
@@ -60,7 +58,7 @@ def get_min_number():
                 min_number = first_number
             if min_number > third_number:
                 min_number = third_number
-            print(f"Минимальное из чисел: {min_number}")
+            return f"Минимальное из чисел: {min_number}"
 
 
 def get_quarter_number():
@@ -68,7 +66,7 @@ def get_quarter_number():
         x = float(input("Введите координату X: "))
         y = float(input("Введите координату Y: "))
     except ValueError:
-        print("Ошибка ввода!")
+        return "Ошибка ввода!"
     else:
         if x != 0 and y != 0:
             if y > 0:
@@ -81,9 +79,9 @@ def get_quarter_number():
                     quarter_number = 2
                 else:
                     quarter_number = 3
-            print(f"Точка принадлежит {quarter_number}-ой четверти")
+            return f"Точка принадлежит {quarter_number}-ой четверти"
         else:
-            print("Точка принадлежит оси координат ")
+            return "Точка принадлежит оси координат "
 
 
 
