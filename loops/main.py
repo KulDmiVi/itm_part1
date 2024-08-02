@@ -5,57 +5,69 @@ def average():
     numbers_count = 0
     sum_numbers = 0
     input_data = ''
+
     while input_data != 0:
         try:
             input_data = float(input("Введите число: "))
         except ValueError:
-            print("Введенное значение не корректно")
-            exit(0)
+            return "Введенное значение не корректно"
         sum_numbers += input_data
         numbers_count += 1
     else:
         if numbers_count > 1:
-            print(f"Среднее арифметическое: {sum_numbers / (numbers_count - 1)}")
+            return f"Среднее арифметическое: {sum_numbers / (numbers_count - 1)}"
         else:
-            print(f"Количество введенных чисел равно 0")
+            return f"Количество введенных чисел равно 0"
 
 
 def output_range():
+    result = []
     for number in range(101):
-        print(number)
+        result.append(number)
+    return result
 
 
 def multiplication_table():
+    result = []
     for i in range(10):
         for z in range(10):
-            print(f"{i} x {z} = {i * z}")
+            result.append(f"{i} x {z} = {i * z}")
+    return result
 
 
 def output_list():
+    result = []
     data_list = [random.randint(0, 100) for _ in range(10)]
     for item in data_list:
-        print(item)
+        result.append(item)
+    return result
 
 
 def output_dict():
+    result = []
     data_dict = {z: random.randint(0, 100) for z in range(10)}
     for key, value in data_dict.items():
-        print(f"{key}: {value}")
+        result.append(f"{key}: {value}")
+    return result
 
 
 def output_multiples_three():
+    result = []
     for i in range(1, 101):
         if i % 3 == 0:
-            print(i)
+            result.append(i)
+    return result
 
 
 def summ_100():
-    print(sum(range(1, 101)))
+    return sum(range(1, 101))
 
 
 def multiplication_table_2():
+    result = []
     for i in range(1, 11):
-        print(f"2 x {i} = {i * 2}")
+        result.append(f"2 x {i} = {i * 2}")
+    return " ".join(result)
 
 
 def prime_numbers():
@@ -66,34 +78,38 @@ def prime_numbers():
                 break
         else:
             lst.append(i)
-    print(lst)
+    return lst
 
 
 def sqrt_sums():
     sqrt_sum = 0
     for i in range(1, 11):
         sqrt_sum += i ** 2
-    print(sqrt_sum)
+    return sqrt_sum
 
 
 def output_sqrt_numbers():
     i = 0
+    result = []
     while i <= 10:
-        print(f"{i}^2 = {i ** 2}")
+        result.append(f"{i}^2 = {i ** 2}")
         i += 0.5
+    return " ".join(result)
 
 
 def get_factorial():
     fact = 1
+    result = []
     for i in range(1, 6):
         fact = fact * i
-        print(f"Факториал {i}: {fact}")
+        result.append(f"{i}: {fact}")
+    return " ".join(result)
 
 
 if __name__ == '__main__':
     # average()
     # output_range()
-    # print("Таблица умножения")
+    # return "Таблица умножения")
     # multiplication_table()
     # output_list()
     # output_dict()
