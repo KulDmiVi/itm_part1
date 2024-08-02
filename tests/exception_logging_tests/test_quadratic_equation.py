@@ -1,7 +1,7 @@
 import builtins
 from unittest import mock
 
-import pytest
+
 
 from exception_logging.quadratic_equation import *
 

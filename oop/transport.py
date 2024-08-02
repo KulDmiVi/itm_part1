@@ -37,8 +37,7 @@ class Car(MeansOfTransport):
     car_drive = 4
 
     def __init__(self, color: str, brand: str, wheel_count=4):
-        self.color = color
-        self.brand = brand
+        super().__init__(color, brand)
         self.wheel_count = wheel_count
         self.show_car_drive()
 
@@ -62,9 +61,8 @@ class Car(MeansOfTransport):
 
 class Moped(MeansOfTransport):
     def __init__(self, color: str, brand: str, wheel_count=2):
-        self.__color = color
-        self.__brand = brand
-        self.__wheel_count = wheel_count
+        super().__init__(color, brand)
+        self.wheel_count = wheel_count
         self.public_var = "public"
         self._protected_var = "protected"
         self.__private_var = "private"
