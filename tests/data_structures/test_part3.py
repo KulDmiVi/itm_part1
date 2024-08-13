@@ -1,5 +1,4 @@
 
-
 from data_structures.part3 import is_positive, is_odd, is_even, logic1, logic2, logic3, logic4, logic5, logic6, logic7
 
 
